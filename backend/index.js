@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(cors());
 
 // Database connection with MongoDb
-mongoose.connect('mongodb+srv://ecommerceuser:LwZPoSDvNTrg3y6W@cluster0.pjfsd.mongodb.net/e-commerce')
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
 
 // API Creation
 
