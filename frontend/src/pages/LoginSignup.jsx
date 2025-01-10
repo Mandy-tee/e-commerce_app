@@ -30,7 +30,7 @@ const LoginSignup = () => {
       window.location.replace('/');
     }
     else {
-      alert(responseData.erros)
+      alert(responseData.errors)
     }
   }
 
